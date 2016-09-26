@@ -1,0 +1,5 @@
+add_subdirectory (ApplePie)
+add_subdirectory (Interpreter)
+if (APPLE_PIE_CTEST)
+    add_subdirectory (Tests)
+endif ()
