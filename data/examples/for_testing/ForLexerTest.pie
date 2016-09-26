@@ -14,12 +14,9 @@ And it will @
 successfully@
 readed! :)  
 
-define Main (arguments : Table)
-{
-    IO.Print ("First argument " + arguments [0] + "\nSecond argument " + @
-                arguments [1] + "\n")
+IO.Print ("First argument " + arguments [0] + "\nSecond argument " + @
+            arguments [1] + "\n")
     
-    IO.Print (MyFunction (1, 2) + "\n")
-    IO.Print (MyFunction (0.3, 0.5) + "\n")
-    IO.Print (MyFunction (1.25, 2.34) + "\n")
-}
+IO.Print (MyFunction (1, 2) + "\n")
+IO.Print (MyFunction (0.3, 0.5) + "\n")
+IO.Print (MyFunction (1.25, 2.34) + "\n")
