@@ -76,6 +76,7 @@ void Lexer::ReadNotAlNumSymbols (std::vector<TokenData> &tokens)
     assert (processingCode_.at (lastReadIndex_) != LINE_END_CHAR);
     assert (processingCode_.at (lastReadIndex_) != CODE_BLOCK_START_CHAR);
     assert (processingCode_.at (lastReadIndex_) != CODE_BLOCK_END_CHAR);
+    assert (processingCode_.at (lastReadIndex_) != OBJECT_ACCESS_CHAR);
 
     std::string symbols = "";
     do
@@ -84,7 +85,7 @@ void Lexer::ReadNotAlNumSymbols (std::vector<TokenData> &tokens)
         lastReadIndex_ += 1;
         if (lastReadIndex_ >= processingCode_.length ())
         {
-            tokens.push_back (TokenData (TOKEN_NOT_ALNUM_SYMBOLS, symbols);
+            tokens.push_back (TokenData (TOKEN_NOT_ALNUM_SYMBOLS, symbols));
             return;
         }
     }
@@ -92,7 +93,10 @@ void Lexer::ReadNotAlNumSymbols (std::vector<TokenData> &tokens)
            processingCode_.at (lastReadIndex_) != CONTINUE_LINE_CHAR &&
            processingCode_.at (lastReadIndex_) != LINE_END_CHAR &&
            processingCode_.at (lastReadIndex_) != CODE_BLOCK_START_CHAR &&
-           processingCode_.at (lastReadIndex_) != CODE_BLOCK_END_CHAR);
+           processingCode_.at (lastReadIndex_) != CODE_BLOCK_END_CHAR &&
+           processingCode_.at (lastReadIndex_) != OBJECT_ACCESS_CHAR);
+
+    tokens.push_back (TokenData (TOKEN_NOT_ALNUM_SYMBOLS, symbols));
     lastReadIndex_ += 1;
 }
 
@@ -139,6 +143,36 @@ std::vector <TokenData> Lexer::Process (std::string code)
         else if (processingCode_.at (lastReadIndex_) == CODE_BLOCK_END_CHAR)
         {
             tokens.push_back (TokenData (TOKEN_CODE_BLOCK_END));
+            lastReadIndex_ += 1;
+        }
+
+        else if (processingCode_.at (lastReadIndex_) == OBJECT_ACCESS_CHAR)
+        {
+            tokens.push_back (TokenData (TOKEN_OBJECT_ACCESS));
+            lastReadIndex_ += 1;
+        }
+
+        else if (processingCode_.at (lastReadIndex_) == OPEN_CIRCLE_BRACKET_CHAR)
+        {
+            tokens.push_back (TokenData (TOKEN_OPEN_CIRCLE_BRACKET));
+            lastReadIndex_ += 1;
+        }
+
+        else if (processingCode_.at (lastReadIndex_) == CLOSE_CIRCLE_BRACKET_CHAR)
+        {
+            tokens.push_back (TokenData (TOKEN_CLOSE_CIRCLE_BRACKET));
+            lastReadIndex_ += 1;
+        }
+
+        else if (processingCode_.at (lastReadIndex_) == OPEN_QUAD_BRACKET_CHAR)
+        {
+            tokens.push_back (TokenData (TOKEN_OPEN_QUAD_BRACKET));
+            lastReadIndex_ += 1;
+        }
+
+        else if (processingCode_.at (lastReadIndex_) == CLOSE_QUAD_BRACKET_CHAR)
+        {
+            tokens.push_back (TokenData (TOKEN_CLOSE_QUAD_BRACKET));
             lastReadIndex_ += 1;
         }
 

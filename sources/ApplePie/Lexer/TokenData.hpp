@@ -19,6 +19,18 @@ enum TokenType
     TOKEN_CODE_BLOCK_START = 5,
     // '}'
     TOKEN_CODE_BLOCK_END = 6,
+    // Object members of functions of static class members access
+    TOKEN_OBJECT_ACCESS = 7,
+
+    // '('
+    TOKEN_OPEN_CIRCLE_BRACKET = 8,
+    // ')'
+    TOKEN_CLOSE_CIRCLE_BRACKET = 9,
+
+    // '['
+    TOKEN_OPEN_QUAD_BRACKET = 10,
+    // ']'
+    TOKEN_CLOSE_QUAD_BRACKET = 11,
 
     // End of input string.
     TOKEN_END_OF_INPUT = -1

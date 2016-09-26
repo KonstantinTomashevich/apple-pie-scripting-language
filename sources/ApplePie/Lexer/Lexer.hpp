@@ -9,6 +9,11 @@ const char COMMENT_START_CHAR = '#';
 const char CODE_BLOCK_START_CHAR = '{';
 const char CODE_BLOCK_END_CHAR = '}';
 const char LINE_END_CHAR = '\n';
+const char OBJECT_ACCESS_CHAR = '.';
+const char OPEN_CIRCLE_BRACKET_CHAR = '(';
+const char CLOSE_CIRCLE_BRACKET_CHAR = ')';
+const char OPEN_QUAD_BRACKET_CHAR = '[';
+const char CLOSE_QUAD_BRACKET_CHAR = ']';
 
 class Lexer
 {
