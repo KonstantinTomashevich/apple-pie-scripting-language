@@ -1,0 +1,25 @@
+#Some comment about function
+define MyFunction (arg1 : Number, arg2 : Number) : Number
+{
+    local sum : Number = arg1 + arg2
+    local diff : Number = Math.Abs (arg1 - arg2)
+    local result : Number = sum + diff
+    return result
+}
+
+# This is   @
+multiline   @
+comment!    @
+And it will @
+successfully@
+readed! :)  
+
+define Main (arguments : Table)
+{
+    IO.Print ("First argument " + arguments [0] + "\nSecond argument " + @
+                arguments [1] + "\n")
+    
+    IO.Print (MyFunction (1, 2) + "\n")
+    IO.Print (MyFunction (0.3, 0.5) + "\n")
+    IO.Print (MyFunction (1.25, 2.34) + "\n")
+}

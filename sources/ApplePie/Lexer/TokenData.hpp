@@ -12,25 +12,27 @@ enum TokenType
     TOKEN_IDENTIFIER = 2,
     // '3.45', '4', '.5'...
     TOKEN_NUMBER_LITERAL = 3,
+    // '"mystring"'...
+    TOKEN_STRING_LITERAL = 4,
     // '+', '=', '&&'...
-    TOKEN_NOT_ALNUM_SYMBOLS = 4,
+    TOKEN_NOT_ALNUM_SYMBOLS = 5,
 
     // '{'
-    TOKEN_CODE_BLOCK_START = 5,
+    TOKEN_CODE_BLOCK_START = 6,
     // '}'
-    TOKEN_CODE_BLOCK_END = 6,
+    TOKEN_CODE_BLOCK_END = 7,
     // Object members of functions of static class members access
-    TOKEN_OBJECT_ACCESS = 7,
+    TOKEN_OBJECT_ACCESS = 8,
 
     // '('
-    TOKEN_OPEN_CIRCLE_BRACKET = 8,
+    TOKEN_OPEN_CIRCLE_BRACKET = 9,
     // ')'
-    TOKEN_CLOSE_CIRCLE_BRACKET = 9,
+    TOKEN_CLOSE_CIRCLE_BRACKET = 10,
 
     // '['
-    TOKEN_OPEN_QUAD_BRACKET = 10,
+    TOKEN_OPEN_QUAD_BRACKET = 11,
     // ']'
-    TOKEN_CLOSE_QUAD_BRACKET = 11,
+    TOKEN_CLOSE_QUAD_BRACKET = 12,
 
     // End of input string.
     TOKEN_END_OF_INPUT = -1
@@ -40,15 +42,12 @@ class TokenData
 {
 public:
     TokenData ();
-    TokenData (TokenType type, std::string additionalDataStr = "", double additionalDataDouble = 0.0,
-               int lineIndex = -1, int characterOnLineIndex = -1);
+    TokenData (TokenType type, std::string additionalDataStr = "", double additionalDataDouble = 0.0, int lineIndex = -1);
     virtual ~TokenData ();
 
     TokenType type_;
     double additionalDataDouble_;
     std::string additionalDataStr_;
-
     int lineIndex_;
-    int characterOnLineIndex_;
 };
 }

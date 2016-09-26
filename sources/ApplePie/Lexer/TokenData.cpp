@@ -7,12 +7,11 @@ TokenData::TokenData ()
 
 }
 
-TokenData::TokenData (TokenType type, std::string additionalDataStr, double additionalDataDouble, int lineIndex, int characterOnLineIndex) :
+TokenData::TokenData (TokenType type, std::string additionalDataStr, double additionalDataDouble, int lineIndex) :
     type_ (type),
     additionalDataStr_ (additionalDataStr),
     additionalDataDouble_ (additionalDataDouble),
-    lineIndex_ (lineIndex),
-    characterOnLineIndex_ (characterOnLineIndex)
+    lineIndex_ (lineIndex)
 {
 
 }
