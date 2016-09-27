@@ -1,0 +1,5 @@
+language: cpp
+compiler: gcc
+dist: trusty
+
+script: mkdir build && cmake .. -DAPPLE_PIE_CTEST=1 && make && make test
