@@ -75,12 +75,12 @@ bool Lexer::ReadNumber (std::vector <TokenData> &tokens)
 
         if (lastReadIndex_ >= processingCode_.length ())
         {
-            tokens.push_back (TokenData (TOKEN_NUMBER_LITERAL, number, atof (number.c_str ()), lastLineIndex_));
+            tokens.push_back (TokenData (TOKEN_NUMBER_LITERAL, number, ::atof (number.c_str ()), lastLineIndex_));
             return true;
         }
     }
     while (std::isdigit (processingCode_.at (lastReadIndex_)) || processingCode_.at (lastReadIndex_) == '.');
-    tokens.push_back (TokenData (TOKEN_NUMBER_LITERAL, number, atof (number.c_str ()), lastLineIndex_));
+    tokens.push_back (TokenData (TOKEN_NUMBER_LITERAL, number, ::atof (number.c_str ()), lastLineIndex_));
     return true;
 }
 
