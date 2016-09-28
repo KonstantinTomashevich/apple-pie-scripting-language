@@ -29,4 +29,20 @@ public:
     virtual std::string GetObjectTypeName ();
     virtual unsigned GetObjectTypeHash ();
 };
+
+class RefCounted
+{
+private:
+    int refsCount_;
+    bool ignore_;
+public:
+    RefCounted ();
+    virtual ~RefCounted ();
+
+    void AddRef ();
+    void ReleaseRef ();
+
+    bool IsIgnoringRefsCount ();
+    void SetIsIgnoringRefsCount (bool ignore);
+};
 }

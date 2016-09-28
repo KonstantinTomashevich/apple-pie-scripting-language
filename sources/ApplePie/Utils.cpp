@@ -30,4 +30,37 @@ unsigned ObjectWithKnownTypeImpl::GetObjectTypeHash ()
 {
     return typeHash_;
 }
+
+RefCounted::RefCounted ()
+{
+    ignore_ = false;
+    refsCount_ = 0;
+}
+
+RefCounted::~RefCounted ()
+{
+
+}
+
+void RefCounted::AddRef ()
+{
+    refsCount_ += 1;
+}
+
+void RefCounted::ReleaseRef ()
+{
+    refsCount_ -= 1;
+    if (refsCount_ < 1 && !ignore_)
+        delete this;
+}
+
+bool RefCounted::IsIgnoringRefsCount ()
+{
+    return ignore_;
+}
+
+void RefCounted::SetIsIgnoringRefsCount (bool ignore)
+{
+    ignore_ = ignore;
+}
 }
