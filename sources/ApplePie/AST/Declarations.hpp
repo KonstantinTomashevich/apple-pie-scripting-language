@@ -37,13 +37,13 @@ class FunctionDeclarition : public Declaration
 protected:
     std::string name_;
     std::string returnType_;
-    std::vector <VariableDeclaration> arguments_;
+    std::vector <VariableDeclaration *> arguments_;
 public:
-    FunctionDeclarition (std::string name, std::string returnType, std::vector <VariableDeclaration> &arguments);
+    FunctionDeclarition (std::string name, std::string returnType, std::vector <VariableDeclaration *> &arguments);
     virtual ~FunctionDeclarition ();
 
     std::string GetReturnType ();
-    std::vector <VariableDeclaration> *GetArgumentsDeclaritionsVector ();
+    std::vector <VariableDeclaration *> *GetArgumentsDeclaritionsVector();
 
     // Declaration interface
     std::string GetName ();

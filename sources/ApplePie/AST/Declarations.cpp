@@ -42,7 +42,7 @@ std::string VariableDeclaration::GetObjectTypeName ()
 }
 
 FunctionDeclarition::FunctionDeclarition (std::string name, std::string returnType,
-                                          std::vector <VariableDeclaration> &arguments) :
+                                          std::vector <VariableDeclaration *> &arguments) :
     name_ (name),
     returnType_ (returnType),
     arguments_ (arguments)
@@ -52,7 +52,9 @@ FunctionDeclarition::FunctionDeclarition (std::string name, std::string returnTy
 
 FunctionDeclarition::~FunctionDeclarition()
 {
-
+    for (int index = 0; index < arguments_.size (); index++)
+        delete arguments_.at (index);
+    arguments_.clear ();
 }
 
 std::string FunctionDeclarition::GetReturnType ()
@@ -80,7 +82,7 @@ std::string FunctionDeclarition::ToString ()
     result += ";requires arguments: ";
 
     for (int index = 0; index < arguments_.size (); index++)
-        result += arguments_.at (index).ToString ();
+        result += arguments_.at (index)->ToString ();
     result += " ]";
     return result;
 }
@@ -90,7 +92,7 @@ std::string FunctionDeclarition::GetObjectTypeName ()
     return "FunctionDeclarition";
 }
 
-std::vector <VariableDeclaration> *FunctionDeclarition::GetArgumentsDeclaritionsVector ()
+std::vector <VariableDeclaration *> *FunctionDeclarition::GetArgumentsDeclaritionsVector ()
 {
     return &arguments_;
 }
