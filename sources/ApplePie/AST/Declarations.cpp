@@ -4,6 +4,7 @@ namespace ApplePie
 {
 
 VariableDeclaration::VariableDeclaration (std::string name, std::string type) :
+    ObjectWithKnownTypeImpl ("VariableDeclarition"),
     name_ (name),
     type_ (type)
 {
@@ -36,13 +37,9 @@ std::string VariableDeclaration::ToString ()
     return result;
 }
 
-std::string VariableDeclaration::GetObjectTypeName ()
-{
-    return "VariableDeclarition";
-}
-
 FunctionDeclarition::FunctionDeclarition (std::string name, std::string returnType,
                                           std::vector <VariableDeclaration *> &arguments) :
+    ObjectWithKnownTypeImpl ("FunctionDeclarition"),
     name_ (name),
     returnType_ (returnType),
     arguments_ (arguments)
@@ -85,11 +82,6 @@ std::string FunctionDeclarition::ToString ()
         result += arguments_.at (index)->ToString ();
     result += " ]";
     return result;
-}
-
-std::string FunctionDeclarition::GetObjectTypeName ()
-{
-    return "FunctionDeclarition";
 }
 
 std::vector <VariableDeclaration *> *FunctionDeclarition::GetArgumentsDeclaritionsVector ()

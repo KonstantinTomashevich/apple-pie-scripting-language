@@ -3,6 +3,7 @@
 
 namespace ApplePie
 {
+unsigned StringToHash(std::string str);
 class StringifyAble
 {
 public:
@@ -13,5 +14,19 @@ class ObjectWithKnownType
 {
 public:
     virtual std::string GetObjectTypeName () = 0;
+    virtual unsigned GetObjectTypeHash () = 0;
+};
+
+class ObjectWithKnownTypeImpl : public ObjectWithKnownType
+{
+private:
+    unsigned typeHash_;
+    std::string typeName_;
+public:
+    ObjectWithKnownTypeImpl (std::string typeName);
+    virtual ~ObjectWithKnownTypeImpl ();
+
+    virtual std::string GetObjectTypeName ();
+    virtual unsigned GetObjectTypeHash ();
 };
 }

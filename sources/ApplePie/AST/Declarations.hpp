@@ -12,7 +12,7 @@ public:
     virtual std::string GetType () = 0;
 };
 
-class VariableDeclaration : public Declaration
+class VariableDeclaration : public Declaration, public ObjectWithKnownTypeImpl
 {
 protected:
     std::string name_;
@@ -27,12 +27,9 @@ public:
 
     // StringifyAble interface
     std::string ToString ();
-
-    // ObjectWithKnownType interface
-    virtual std::string GetObjectTypeName ();
 };
 
-class FunctionDeclarition : public Declaration
+class FunctionDeclarition : public Declaration, public ObjectWithKnownTypeImpl
 {
 protected:
     std::string name_;
@@ -51,8 +48,5 @@ public:
 
     // StringifyAble interface
     std::string ToString ();
-
-    // ObjectWithKnownType interface
-    virtual std::string GetObjectTypeName ();
 };
 }
