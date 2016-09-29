@@ -9,28 +9,6 @@ unsigned StringToHash (std::string str)
     return hash % 86969;
 }
 
-ObjectWithKnownTypeImpl::ObjectWithKnownTypeImpl (std::string typeName) :
-    typeName_ (typeName),
-    typeHash_ (StringToHash (typeName))
-{
-
-}
-
-ObjectWithKnownTypeImpl::~ObjectWithKnownTypeImpl ()
-{
-
-}
-
-std::string ObjectWithKnownTypeImpl::GetObjectTypeName ()
-{
-    return typeName_;
-}
-
-unsigned ObjectWithKnownTypeImpl::GetObjectTypeHash ()
-{
-    return typeHash_;
-}
-
 RefCounted::RefCounted ()
 {
     ignore_ = false;

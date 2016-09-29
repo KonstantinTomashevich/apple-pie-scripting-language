@@ -1,6 +1,11 @@
 #pragma once
 #include <string>
 
+#define APPLE_PIE_OBJECT_WITH_KNOWN_TYPE(typeName, typeNameHash) \
+    public: \
+        virtual std::string GetObjectTypeName () { return #typeName; } \
+        virtual unsigned GetObjectTypeHash () { return typeNameHash; }
+
 namespace ApplePie
 {
 unsigned StringToHash(std::string str);
@@ -15,19 +20,6 @@ class ObjectWithKnownType
 public:
     virtual std::string GetObjectTypeName () = 0;
     virtual unsigned GetObjectTypeHash () = 0;
-};
-
-class ObjectWithKnownTypeImpl : public ObjectWithKnownType
-{
-private:
-    unsigned typeHash_;
-    std::string typeName_;
-public:
-    ObjectWithKnownTypeImpl (std::string typeName);
-    virtual ~ObjectWithKnownTypeImpl ();
-
-    virtual std::string GetObjectTypeName ();
-    virtual unsigned GetObjectTypeHash ();
 };
 
 class RefCounted

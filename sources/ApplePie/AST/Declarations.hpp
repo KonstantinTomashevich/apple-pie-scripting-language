@@ -5,6 +5,9 @@
 
 namespace ApplePie
 {
+unsigned VARIABLE_DECLARITION_TYPE_HASH = StringToHash ("VariableDeclarition");
+unsigned FUNCTION_DECLARITION_TYPE_HASH = StringToHash ("FunctionDeclarition");
+
 class Declaration : public StringifyAble, public ObjectWithKnownType
 {
 public:
@@ -12,8 +15,9 @@ public:
     virtual std::string GetType () = 0;
 };
 
-class VariableDeclaration : public Declaration, public ObjectWithKnownTypeImpl
+class VariableDeclaration : public Declaration
 {
+APPLE_PIE_OBJECT_WITH_KNOWN_TYPE (VariableDeclarition, VARIABLE_DECLARITION_TYPE_HASH)
 protected:
     std::string name_;
     std::string type_;
@@ -29,8 +33,9 @@ public:
     std::string ToString ();
 };
 
-class FunctionDeclarition : public Declaration, public ObjectWithKnownTypeImpl
+class FunctionDeclarition : public Declaration
 {
+APPLE_PIE_OBJECT_WITH_KNOWN_TYPE (FunctionDeclarition, FUNCTION_DECLARITION_TYPE_HASH)
 protected:
     std::string name_;
     std::string returnType_;
