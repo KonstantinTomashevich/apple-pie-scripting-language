@@ -8,11 +8,17 @@
 
 namespace ApplePie
 {
+enum VariableCreationType
+{
+    VARIABLE_LOCAL = 0,
+    VARIABLE_GLOBAL = 1
+};
+
 unsigned StringToHash(std::string str);
 class StringifyAble
 {
 public:
-    virtual std::string ToString () = 0;
+    virtual std::string ToString (int addSpacesIndentation = 0) = 0;
 };
 
 class ObjectWithKnownType

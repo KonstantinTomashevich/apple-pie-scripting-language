@@ -19,7 +19,7 @@ public:
     virtual ~Class ();
 
     virtual std::vector <VariableDeclaration *> GetMembersDeclaritions () = 0;
-    virtual std::vector <FunctionDeclarition *> GetFunctionsDeclaritions () = 0;
+    virtual std::vector <FunctionDeclaration *> GetFunctionsDeclaritions () = 0;
     virtual bool CreateInstance (Object *toObject) = 0;
     virtual bool IsInheritFrom (Class *baseClass) = 0;
 };
