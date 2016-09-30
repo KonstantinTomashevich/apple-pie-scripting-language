@@ -92,8 +92,6 @@ int main (int argsCount, char *args [])
     file.close ();
     std::cout << "done.\n\n" << code;
 
-    // TODO: Make some changes in test code. Variables construction syntax is [creationType] [name] : [type] ([arguments...]).
-
     ApplePie::Lexer lexer;
     std::vector <ApplePie::TokenData> tokens = lexer.Process (code);
     std::cout << "\n\nTokens count -- " << tokens.size () << ". Tokens:\n\n";
