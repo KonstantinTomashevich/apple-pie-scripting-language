@@ -21,7 +21,7 @@ std::string TokenDataToString (ApplePie::TokenData tokenData)
     else if (tokenData.type_ == ApplePie::TOKEN_IDENTIFIER)
         return "IDENTIFIER '" + tokenData.additionalDataStr_ + "'";
 
-    else if (tokenData.type_ == ApplePie::TOKEN_NUMBER_LITERAL)
+    else if (tokenData.type_ == ApplePie::TOKEN_NUMERIC_LITERAL)
         return "NUMBER '" + tokenData.additionalDataStr_ + "'";
 
     else if (tokenData.type_ == ApplePie::TOKEN_STRING_LITERAL)
