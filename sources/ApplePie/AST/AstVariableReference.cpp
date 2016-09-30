@@ -1,24 +1,24 @@
-#include "AstVariable.hpp"
+#include "AstVariableReference.hpp"
 
 namespace ApplePie
 {
-AstVariable::AstVariable (std::string name) :
+AstVariableReference::AstVariableReference (std::string name) :
     name_ (name)
 {
 
 }
 
-AstVariable::~AstVariable ()
+AstVariableReference::~AstVariableReference ()
 {
 
 }
 
-std::string AstVariable::GetName ()
+std::string AstVariableReference::GetName ()
 {
     return name_;
 }
 
-std::string AstVariable::ToString (int addSpacesIndentation)
+std::string AstVariableReference::ToString (int addSpacesIndentation)
 {
     std::string result;
     std::string indent = "";
