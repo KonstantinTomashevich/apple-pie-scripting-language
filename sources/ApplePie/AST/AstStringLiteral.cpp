@@ -13,7 +13,7 @@ AstStringLiteral::~AstStringLiteral ()
 
 }
 
-std::string AstStringLiteral::GetValue()
+std::string AstStringLiteral::GetValue ()
 {
     return value_;
 }
