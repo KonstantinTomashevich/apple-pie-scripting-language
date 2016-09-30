@@ -30,6 +30,7 @@ protected:
     bool SkipComment();
     void SkipSpaces ();
     bool ReadIdentifier (std::vector <TokenData> &tokens);
+    bool PushIdentifierOrCommand (std::string identifier, std::vector <TokenData> &tokens);
     bool ReadNumber (std::vector <TokenData> &tokens);
     bool ReadString (std::vector <TokenData> &tokens);
     bool ReadNotAlNumSymbols (std::vector <TokenData> &tokens);

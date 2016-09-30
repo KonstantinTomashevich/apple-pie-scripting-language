@@ -5,7 +5,7 @@ namespace ApplePie
 {
 enum TokenType
 {
-    // ApplePie reads '\n' as ';' in C++. If you want to skip next '\n' add '\' before end of line.
+    // ApplePie reads '\n' as ';' in C++. If you want to skip next '\n' add '@' before end of line.
     TOKEN_END_OF_LINE = 1,
 
     // 'myfunc', 'var1'...
@@ -17,22 +17,31 @@ enum TokenType
     // '+', '=', '&&'...
     TOKEN_NOT_ALNUM_SYMBOLS = 5,
 
+    // For declaring local variables.
+    TOKEN_LOCAL = 6,
+    // For declaring global variables.
+    TOKEN_GLOBAL = 7,
+    // For declaring functions.
+    TOKEN_DEFINE = 8,
+    // For declaring classes.
+    TOKEN_CLASS = 9,
+
     // '{'
-    TOKEN_CODE_BLOCK_START = 6,
+    TOKEN_CODE_BLOCK_START = 10,
     // '}'
-    TOKEN_CODE_BLOCK_END = 7,
+    TOKEN_CODE_BLOCK_END = 11,
     // Object members of functions of static class members access
-    TOKEN_OBJECT_ACCESS = 8,
+    TOKEN_OBJECT_ACCESS = 12,
 
     // '('
-    TOKEN_OPEN_CIRCLE_BRACKET = 9,
+    TOKEN_OPEN_CIRCLE_BRACKET = 13,
     // ')'
-    TOKEN_CLOSE_CIRCLE_BRACKET = 10,
+    TOKEN_CLOSE_CIRCLE_BRACKET = 14,
 
     // '['
-    TOKEN_OPEN_QUAD_BRACKET = 11,
+    TOKEN_OPEN_QUAD_BRACKET = 15,
     // ']'
-    TOKEN_CLOSE_QUAD_BRACKET = 12,
+    TOKEN_CLOSE_QUAD_BRACKET = 16,
 
     // End of input string.
     TOKEN_END_OF_INPUT = -1

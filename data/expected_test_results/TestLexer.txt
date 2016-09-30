@@ -1,4 +1,4 @@
-0: Line 2 -- IDENTIFIER 'define'
+0: Line 2 -- DEFINE
 1: Line 2 -- IDENTIFIER 'MyFunction'
 2: Line 2 -- OPEN_CIRCLE_BRACKETS
 3: Line 2 -- IDENTIFIER 'arg1'
@@ -14,7 +14,7 @@
 13: Line 2 -- END_OF_LINE
 14: Line 3 -- CODE_BLOCK_START
 15: Line 3 -- END_OF_LINE
-16: Line 4 -- IDENTIFIER 'local'
+16: Line 4 -- LOCAL
 17: Line 4 -- IDENTIFIER 'sum'
 18: Line 4 -- NOT_ALNUM_SYMBOLS ':'
 19: Line 4 -- IDENTIFIER 'Number'
@@ -24,7 +24,7 @@
 23: Line 4 -- IDENTIFIER 'arg2'
 24: Line 4 -- CLOSE_CIRCLE_BRACKETS
 25: Line 4 -- END_OF_LINE
-26: Line 5 -- IDENTIFIER 'local'
+26: Line 5 -- LOCAL
 27: Line 5 -- IDENTIFIER 'diff'
 28: Line 5 -- NOT_ALNUM_SYMBOLS ':'
 29: Line 5 -- IDENTIFIER 'Number'
@@ -39,7 +39,7 @@
 38: Line 5 -- CLOSE_CIRCLE_BRACKETS
 39: Line 5 -- CLOSE_CIRCLE_BRACKETS
 40: Line 5 -- END_OF_LINE
-41: Line 6 -- IDENTIFIER 'local'
+41: Line 6 -- LOCAL
 42: Line 6 -- IDENTIFIER 'result'
 43: Line 6 -- NOT_ALNUM_SYMBOLS ':'
 44: Line 6 -- IDENTIFIER 'Number'

@@ -56,13 +56,27 @@ bool Lexer::ReadIdentifier (std::vector <TokenData> &tokens)
         lastReadIndex_ += 1;
         if (lastReadIndex_ >= processingCode_.length ())
         {
-            tokens.push_back (TokenData (TOKEN_IDENTIFIER, identifier, 0.0, lastLineIndex_));
+            PushIdentifierOrCommand (identifier, tokens);
             return true;
         }
     }
     while (std::isalnum (processingCode_.at (lastReadIndex_)));
-    tokens.push_back (TokenData (TOKEN_IDENTIFIER, identifier, 0.0, lastLineIndex_));
+    PushIdentifierOrCommand (identifier, tokens);
     return true;
+}
+
+bool Lexer::PushIdentifierOrCommand (std::string identifier, std::vector<TokenData> &tokens)
+{
+    if (identifier == "local")
+        tokens.push_back (TokenData (TOKEN_LOCAL, "", 0.0, lastLineIndex_));
+    else if (identifier == "global")
+        tokens.push_back (TokenData (TOKEN_GLOBAL, "", 0.0, lastLineIndex_));
+    else if (identifier == "define")
+        tokens.push_back (TokenData (TOKEN_DEFINE, "", 0.0, lastLineIndex_));
+    else if (identifier == "class")
+        tokens.push_back (TokenData (TOKEN_CLASS, "", 0.0, lastLineIndex_));
+    else
+        tokens.push_back (TokenData (TOKEN_IDENTIFIER, identifier, 0.0, lastLineIndex_));
 }
 
 bool Lexer::ReadNumber (std::vector <TokenData> &tokens)

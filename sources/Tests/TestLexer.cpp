@@ -30,6 +30,18 @@ std::string TokenDataToString (ApplePie::TokenData tokenData)
     else if (tokenData.type_ == ApplePie::TOKEN_NOT_ALNUM_SYMBOLS)
         return "NOT_ALNUM_SYMBOLS '" + tokenData.additionalDataStr_ + "'";
 
+    else if (tokenData.type_ == ApplePie::TOKEN_LOCAL)
+        return "LOCAL";
+
+    else if (tokenData.type_ == ApplePie::TOKEN_GLOBAL)
+        return "GLOBAL";
+
+    else if (tokenData.type_ == ApplePie::TOKEN_DEFINE)
+        return "DEFINE";
+
+    else if (tokenData.type_ == ApplePie::TOKEN_CLASS)
+        return "CLASS";
+
     else if (tokenData.type_ == ApplePie::TOKEN_CODE_BLOCK_START)
         return "CODE_BLOCK_START";
 
