@@ -45,6 +45,9 @@ std::string TokenDataToString (ApplePie::TokenData tokenData)
     else if (tokenData.type_ == ApplePie::TOKEN_CLASS)
         return "CLASS";
 
+    else if (tokenData.type_ == ApplePie::TOKEN_INHERITS)
+        return "INHERITS";
+
     else if (tokenData.type_ == ApplePie::TOKEN_CODE_BLOCK_START)
         return "CODE_BLOCK_START";
 

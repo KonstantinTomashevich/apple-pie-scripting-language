@@ -77,6 +77,8 @@ bool Lexer::PushIdentifierOrCommand (std::string identifier, std::vector<TokenDa
         tokens.push_back (TokenData (TOKEN_DEFINE, "", 0.0, lastLineIndex_));
     else if (identifier == "class")
         tokens.push_back (TokenData (TOKEN_CLASS, "", 0.0, lastLineIndex_));
+    else if (identifier == "inherits")
+        tokens.push_back (TokenData (TOKEN_INHERITS, "", 0.0, lastLineIndex_));
     else
         tokens.push_back (TokenData (TOKEN_IDENTIFIER, identifier, 0.0, lastLineIndex_));
 }

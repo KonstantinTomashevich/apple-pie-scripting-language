@@ -1,3 +1,33 @@
+#Some comment about our class
+class BaseClass1 (arg : Number) 
+{
+    member variableA : Number (arg)
+    define Square () : Number
+    {
+        return variableA * variableA
+    }
+}
+
+#Some comment about our class
+class BaseClass2 (arg : Number) 
+{
+    member variableB : Number (arg)
+    define Square () : Number
+    {
+        return (variableB + 1) * variableB
+    }
+}
+
+#Some comment about our class          @
+and this class inherit from both bases!
+class MyClass (arg1 : Number, arg2 : Number) inherits BaseClass1 (arg1), BaseClass2 (arg2)
+{
+    define Square ()
+    {
+        return (variableA + variableB + 1) * (variableA * variableB + 2)
+    }
+}
+
 #Some comment about function
 define MyFunction (arg1 : Number, arg2 : Number) : Number
 {
@@ -6,6 +36,10 @@ define MyFunction (arg1 : Number, arg2 : Number) : Number
     local result : Number (sum + diff)
     return result
 }
+
+# Lets create some globals!
+global myObject : MyClass (3, 4)
+global mySecondObject : MyClass (0.1, 2.3)
 
 # This is multiline    @
 comment! And it will   @
@@ -16,3 +50,5 @@ IO.Print ("First argument " + arguments [0] + "\nSecond argument " + @
 IO.Print (MyFunction (1, 2) + "\n")
 IO.Print (MyFunction (0.3, 0.5) + "\n")
 IO.Print (MyFunction (1.25, 2.34) + "\n")
+IO.Print (myObject.Square () + "\n")
+IO.Print (mySecondObject.Square () + "\n")
