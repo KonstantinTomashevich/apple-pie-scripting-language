@@ -5,13 +5,7 @@
 
 #include "Defines.hpp"
 #include <ApplePie/Lexer/Lexer.hpp>
-
-std::string IntToString (int number)
-{
-    std::stringstream strs;
-    strs << number;
-    return strs.str ();
-}
+#include <ApplePie/Utils.hpp>
 
 std::string TokenDataToString (ApplePie::TokenData tokenData)
 {
@@ -99,9 +93,9 @@ int main (int argsCount, char *args [])
     std::string resultTokens = "";
     for (int index = 0; index < tokens.size (); index++)
     {
-        resultTokens += IntToString (index);
+        resultTokens += ApplePie::IntToString (index);
         resultTokens += ": Line ";
-        resultTokens += IntToString (tokens.at (index).lineIndex_);
+        resultTokens += ApplePie::IntToString (tokens.at (index).lineIndex_);
         resultTokens += " -- ";
         resultTokens += TokenDataToString (tokens.at (index));
         resultTokens += "\n";

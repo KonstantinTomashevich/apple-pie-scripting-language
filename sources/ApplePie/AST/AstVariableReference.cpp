@@ -26,7 +26,7 @@ std::string AstVariableReference::ToString (int addSpacesIndentation)
         for (int index = 0; index < addSpacesIndentation; index++)
             indent += " ";
 
-    result += indent + "[variable ";
+    result += indent + "[variable reference ";
     result += name_;
     result += "]";
     return result;

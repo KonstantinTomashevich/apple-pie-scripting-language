@@ -15,7 +15,11 @@ enum VariableCreationType
     VARIABLE_CLASS_MEMBER = 2
 };
 
+std::string IntToString (int number);
+std::string FloatToString (float number);
+std::string DoubleToString (double number);
 unsigned StringToHash(std::string str);
+
 class StringifyAble
 {
 public:

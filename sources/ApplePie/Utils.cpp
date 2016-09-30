@@ -41,4 +41,25 @@ void RefCounted::SetIsIgnoringRefsCount (bool ignore)
 {
     ignore_ = ignore;
 }
+
+std::string IntToString (int number)
+{
+    std::stringstream strs;
+    strs << number;
+    return strs.str ();
+}
+
+std::string FloatToString (float number)
+{
+    std::stringstream strs;
+    strs << number;
+    return strs.str ();
+}
+
+std::string DoubleToString (double number)
+{
+    std::stringstream strs;
+    strs << number;
+    return strs.str ();
+}
 }

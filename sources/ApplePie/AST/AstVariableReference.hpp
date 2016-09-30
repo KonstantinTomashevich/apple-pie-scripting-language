@@ -1,7 +1,5 @@
 #pragma once
 #include <string>
-#include <vector>
-
 #include <ApplePie/Utils.hpp>
 #include <ApplePie/AST/AstValue.hpp>
 #include <ApplePie/AST/VariableDeclaration.hpp>
