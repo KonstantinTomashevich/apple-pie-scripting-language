@@ -3,11 +3,10 @@
 
 namespace ApplePie
 {
-AstCreateVariable::AstCreateVariable (VariableCreationType creationType, std::string name,
-                                      std::string typeName, std::vector <AstValue *> &constructionArguments) :
+AstCreateVariable::AstCreateVariable (VariableCreationType creationType, VariableDeclaration *declaration,
+                                      std::vector <AstValue *> &constructionArguments) :
     creationType_ (creationType),
-    name_ (name),
-    typeName_ (typeName),
+    declaration_ (declaration),
     constructionArguments_ (constructionArguments)
 {
 
@@ -23,6 +22,11 @@ AstCreateVariable::~AstCreateVariable ()
 VariableCreationType AstCreateVariable::GetCreationType ()
 {
     return creationType_;
+}
+
+VariableDeclaration *AstCreateVariable::GetDeclaration ()
+{
+    return declaration_;
 }
 
 AstValue *AstCreateVariable::GetConstructionArgumentByIndex (int index)
@@ -55,9 +59,9 @@ std::string AstCreateVariable::ToString (int addSpacesIndentation)
         result += "ERROR_UNKNOWN_CREATION_TYPE ";
 
     result += "variable ";
-    result += name_;
+    result += declaration_->GetName ();
     result += " of type ";
-    result += typeName_;
+    result += declaration_->GetType ();
     result += ";\n" + indent + "construction arguments:";
 
     if (constructionArguments_.size () > 0)

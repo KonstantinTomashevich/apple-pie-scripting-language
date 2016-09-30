@@ -4,6 +4,7 @@
 
 #include <ApplePie/Utils.hpp>
 #include <ApplePie/AST/AstValue.hpp>
+#include <ApplePie/AST/VariableDeclaration.hpp>
 
 namespace ApplePie
 {
@@ -14,18 +15,15 @@ class AstCreateVariable : AstValue
 APPLE_PIE_OBJECT_WITH_KNOWN_TYPE (AstCreateVariable, AST_CREATE_VARIABLE_TYPE_HASH)
 protected:
     VariableCreationType creationType_;
-    // TODO: Use variable declaration!
-    std::string name_;
-    std::string typeName_;
+    VariableDeclaration *declaration_;
     std::vector <AstValue *> constructionArguments_;
 public:
-    AstCreateVariable (VariableCreationType creationType, std::string name, std::string typeName,
+    AstCreateVariable (VariableCreationType creationType, VariableDeclaration *declaration,
                        std::vector <AstValue *> &constructionArguments);
     virtual ~AstCreateVariable ();
 
     VariableCreationType GetCreationType ();
-    std::string GetName ();
-    std::string GetTypeName ();
+    VariableDeclaration *GetDeclaration ();
     AstValue *GetConstructionArgumentByIndex (int index);
     int GetConstructionArgumentsCount ();
 
