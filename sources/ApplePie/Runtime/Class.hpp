@@ -3,10 +3,12 @@
 #include <vector>
 
 #include <ApplePie/Runtime/Object.hpp>
-#include <ApplePie/AST/Declarations.hpp>
+#include <ApplePie/AST/VariableDeclaration.hpp>
+#include <ApplePie/AST/FunctionDeclaration.hpp>
 
 namespace ApplePie
 {
+// TODO: Why Class uses declarations? GetMembersDeclaritions and GetFunctionsDeclaritions () will be deleted, because ClassDeclarition has same functions.
 class Class : public StringifyAble, public ObjectWithKnownType
 {
 friend class Object;
