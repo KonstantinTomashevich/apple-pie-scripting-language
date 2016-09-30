@@ -42,7 +42,7 @@ std::string AstOneArgumentOperator::ToString (int addSpacesIndentation)
     result += operatorName_;
     result += " which returns ";
     result += operatorReturnType_;
-    result += ";\n" + indent + "argument:";
+    result += ";\n" + indent + "argument:\n";
     result += argument_->ToString (addSpacesIndentation + 4);
     result += "end of one argument operator]";
     return result;

@@ -49,9 +49,9 @@ std::string AstTwoArgumentsOperators::ToString (int addSpacesIndentation)
     result += operatorName_;
     result += " which returns ";
     result += operatorReturnType_;
-    result += ";\n" + indent + "first argument:";
+    result += ";\n" + indent + "first argument:\n";
     result += firstArgument_->ToString (addSpacesIndentation + 4);
-    result += indent + "second argument:";
+    result += indent + "second argument:\n";
     result += secondArgument_->ToString (addSpacesIndentation + 4);
     result += "end of two arguments operator]";
     return result;

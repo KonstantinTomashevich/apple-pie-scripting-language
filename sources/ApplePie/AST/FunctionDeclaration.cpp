@@ -53,7 +53,7 @@ std::string FunctionDeclaration::ToString (int addSpacesIndentation)
         for (int index = 0; index < addSpacesIndentation; index++)
             indent += " ";
 
-    result += indent + "[function ";
+    result += indent + "[function declaration ";
     result += name_;
     result += ";returns ";
     result += returnType_;
@@ -61,7 +61,7 @@ std::string FunctionDeclaration::ToString (int addSpacesIndentation)
 
     for (int index = 0; index < arguments_.size (); index++)
         result += arguments_.at (index)->ToString (addSpacesIndentation + 4) + "\n";
-    result += indent + "end of function arguments]";
+    result += indent + "end of function declaration]";
     return result;
 }
 }

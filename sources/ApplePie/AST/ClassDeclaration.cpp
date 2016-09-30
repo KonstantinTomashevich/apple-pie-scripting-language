@@ -94,7 +94,7 @@ std::string ClassDeclaration::ToString (int addSpacesIndentation)
     for (int index = 0; index < members_.size (); index++)
         result += members_.at (index)->ToString (addSpacesIndentation + 4) + "\n";
 
-    result += "\n" + indent + "functions\n";
+    result += "\n" + indent + "functions:\n";
     for (int index = 0; index < functions_.size (); index++)
         result += functions_.at (index)->ToString (addSpacesIndentation + 4) + "\n";
     result += "end of class declaration]";

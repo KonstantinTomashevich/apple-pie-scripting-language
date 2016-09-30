@@ -62,7 +62,7 @@ std::string AstCreateVariable::ToString (int addSpacesIndentation)
     result += declaration_->GetName ();
     result += " of type ";
     result += declaration_->GetType ();
-    result += ";\n" + indent + "construction arguments:";
+    result += ";\n" + indent + "construction arguments:\n";
 
     if (constructionArguments_.size () > 0)
         for (int index = 0; index < constructionArguments_.size (); index++)
