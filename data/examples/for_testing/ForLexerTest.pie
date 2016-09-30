@@ -1,9 +1,9 @@
 #Some comment about function
 define MyFunction (arg1 : Number, arg2 : Number) : Number
 {
-    local sum : Number = arg1 + arg2
-    local diff : Number = Math.Abs (arg1 - arg2)
-    local result : Number = sum + diff
+    local sum : Number (arg1 + arg2)
+    local diff : Number (Math.Abs (arg1 - arg2))
+    local result : Number (sum + diff)
     return result
 }
 
