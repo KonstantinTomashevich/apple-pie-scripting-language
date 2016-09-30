@@ -9,7 +9,7 @@ namespace ApplePie
 {
 unsigned AST_FUNCTION_TYPE_HASH = StringToHash ("AstFunction");
 
-class AstFunction : AstValue
+class AstFunction : public AstValue
 {
 APPLE_PIE_OBJECT_WITH_KNOWN_TYPE (AstFunction, AST_FUNCTION_TYPE_HASH)
 protected:

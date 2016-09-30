@@ -7,7 +7,7 @@ namespace ApplePie
 {
 unsigned AST_STRING_LITERAL_TYPE_HASH = StringToHash ("AstStringLiteral");
 
-class AstStringLiteral : AstValue
+class AstStringLiteral : public AstValue
 {
 APPLE_PIE_OBJECT_WITH_KNOWN_TYPE (AstStringLiteral, AST_STRING_LITERAL_TYPE_HASH)
 protected:

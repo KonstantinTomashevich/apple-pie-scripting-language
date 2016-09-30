@@ -9,7 +9,7 @@ namespace ApplePie
 {
 unsigned AST_NODE_TYPE_HASH = StringToHash ("AstNode");
 
-class AstNode : AstValue
+class AstNode : public AstValue
 {
 APPLE_PIE_OBJECT_WITH_KNOWN_TYPE (AstNode, AST_NODE_TYPE_HASH)
 protected:

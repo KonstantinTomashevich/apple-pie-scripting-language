@@ -7,7 +7,7 @@ namespace ApplePie
 {
 unsigned AST_ONE_ARGUMENT_OPERATOR_TYPE_HASH = StringToHash ("AstOneArgumentOperator");
 
-class AstOneArgumentOperator : AstValue
+class AstOneArgumentOperator : public AstValue
 {
 APPLE_PIE_OBJECT_WITH_KNOWN_TYPE (AstOneArgumentOperator, AST_ONE_ARGUMENT_OPERATOR_TYPE_HASH)
 protected:
