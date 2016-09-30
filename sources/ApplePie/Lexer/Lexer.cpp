@@ -71,6 +71,8 @@ bool Lexer::PushIdentifierOrCommand (std::string identifier, std::vector<TokenDa
         tokens.push_back (TokenData (TOKEN_LOCAL, "", 0.0, lastLineIndex_));
     else if (identifier == "global")
         tokens.push_back (TokenData (TOKEN_GLOBAL, "", 0.0, lastLineIndex_));
+    else if (identifier == "member")
+        tokens.push_back (TokenData (TOKEN_MEMBER, "", 0.0, lastLineIndex_));
     else if (identifier == "define")
         tokens.push_back (TokenData (TOKEN_DEFINE, "", 0.0, lastLineIndex_));
     else if (identifier == "class")

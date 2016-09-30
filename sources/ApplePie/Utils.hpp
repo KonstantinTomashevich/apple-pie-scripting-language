@@ -11,7 +11,8 @@ namespace ApplePie
 enum VariableCreationType
 {
     VARIABLE_LOCAL = 0,
-    VARIABLE_GLOBAL = 1
+    VARIABLE_GLOBAL = 1,
+    VARIABLE_CLASS_MEMBER = 2
 };
 
 unsigned StringToHash(std::string str);

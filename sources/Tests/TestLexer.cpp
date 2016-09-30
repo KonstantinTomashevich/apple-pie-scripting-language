@@ -36,6 +36,9 @@ std::string TokenDataToString (ApplePie::TokenData tokenData)
     else if (tokenData.type_ == ApplePie::TOKEN_GLOBAL)
         return "GLOBAL";
 
+    else if (tokenData.type_ == ApplePie::TOKEN_MEMBER)
+        return "MEMBER";
+
     else if (tokenData.type_ == ApplePie::TOKEN_DEFINE)
         return "DEFINE";
 

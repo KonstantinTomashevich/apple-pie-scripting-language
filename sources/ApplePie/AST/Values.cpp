@@ -123,6 +123,8 @@ std::string AstCreateVariable::ToString (int addSpacesIndentation)
         result += "local ";
     else if (creationType_ == VARIABLE_GLOBAL)
         result += "global ";
+    else if (creationType_ == VARIABLE_CLASS_MEMBER)
+        result += "class member ";
     else
         result += "ERROR_UNKNOWN_CREATION_TYPE ";
 
@@ -141,6 +143,8 @@ std::string AstCreateVariable::ToString (int addSpacesIndentation)
         result += "local ";
     else if (creationType_ == VARIABLE_GLOBAL)
         result += "global ";
+    else if (creationType_ == VARIABLE_CLASS_MEMBER)
+        result += "class member ";
     else
         result += "ERROR_UNKNOWN_CREATION_TYPE ";
     result += "variable construction]";
