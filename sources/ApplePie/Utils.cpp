@@ -1,4 +1,6 @@
 #include "Utils.hpp"
+#include <sstream>
+
 namespace ApplePie
 {
 unsigned StringToHash (std::string str)
