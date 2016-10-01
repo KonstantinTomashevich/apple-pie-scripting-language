@@ -2,20 +2,26 @@
 
 namespace ApplePie
 {
-AstVariableReference::AstVariableReference (std::string name) :
-    name_ (name)
+AstVariableReference::AstVariableReference (std::string name, AstValue *provider) :
+    name_ (name),
+    provider_ (provider)
 {
 
 }
 
 AstVariableReference::~AstVariableReference ()
 {
-
+    delete provider_;
 }
 
 std::string AstVariableReference::GetName ()
 {
     return name_;
+}
+
+AstValue *AstVariableReference::GetProvider ()
+{
+    return provider_;
 }
 
 std::string AstVariableReference::ToString (int addSpacesIndentation)
@@ -28,7 +34,14 @@ std::string AstVariableReference::ToString (int addSpacesIndentation)
 
     result += indent + "[variable reference ";
     result += name_;
-    result += "]";
+    if (provider_)
+    {
+        result += "\n" + indent + "provider:\n";
+        result += provider_->ToString (addSpacesIndentation + 4) + "\n";
+        result += indent + "end of variable reference]";
+    }
+    else
+        result += "]";
     return result;
 }
 }
