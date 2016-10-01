@@ -3,9 +3,10 @@
 
 namespace ApplePie
 {
-AstCall::AstCall (std::string calledFunction, std::vector<AstValue *> arguments) :
+AstCall::AstCall (std::string calledFunction, std::vector<AstValue *> arguments, AstValue *provider) :
     calledFunction_ (calledFunction),
-    arguments_ (arguments)
+    arguments_ (arguments),
+    provider_ (provider)
 {
 
 }
@@ -15,6 +16,7 @@ AstCall::~AstCall ()
     for (int index = 0; index < arguments_.size (); index++)
         delete arguments_.at (index);
     arguments_.clear ();
+    delete provider_;
 }
 
 std::string AstCall::GetCalledFunctionName ()
@@ -33,6 +35,11 @@ int AstCall::GetArgumentsCount ()
     return arguments_.size ();
 }
 
+AstValue *AstCall::GetProvider ()
+{
+    return provider_;
+}
+
 std::string AstCall::ToString(int addSpacesIndentation)
 {
     std::string result;
@@ -47,7 +54,13 @@ std::string AstCall::ToString(int addSpacesIndentation)
 
     for (int index = 0; index < arguments_.size (); index++)
         result += arguments_.at (index)->ToString (addSpacesIndentation + 4) + "\n";
-    result += "end of function call]";
+
+    if (provider_)
+    {
+        result += indent + "provider:\n";
+        result += provider_->ToString (addSpacesIndentation + 4) + "\n";
+    }
+    result += indent + "end of function call]";
     return result;
 }
 }
