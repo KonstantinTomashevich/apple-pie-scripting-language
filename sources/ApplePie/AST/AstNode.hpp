@@ -19,7 +19,7 @@ public:
     virtual ~AstNode ();
 
     void PushValue (AstValue *value);
-    AstValue *GetAtIndex (int index);
+    AstValue *GetValueByIndex (int index);
     int GetValuesCount ();
 
     // StringifyAble interface

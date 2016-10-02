@@ -16,15 +16,15 @@ class ClassDeclaration : public Declaration
 APPLE_PIE_OBJECT_WITH_KNOWN_TYPE (ClassDeclarition, CLASS_DECLARITION_TYPE_HASH)
 protected:
     std::string name_;
-    std::vector <ClassDeclaration *> bases_;
+    std::vector <std::string> bases_;
     std::vector <VariableDeclaration *> members_;
     std::vector <FunctionDeclaration *> functions_;
 public:
-    ClassDeclaration (std::string name, std::vector <ClassDeclaration *> bases,
+    ClassDeclaration (std::string name, std::vector <std::string> bases,
                       std::vector <VariableDeclaration *> &members, std::vector <FunctionDeclaration *> functions);
     virtual ~ClassDeclaration ();
 
-    ClassDeclaration *GetBaseDeclarationByIndex (int index);
+    std::string GetBaseNameByIndex (int index);
     int GetBasesCount ();
     VariableDeclaration *GetMemberDeclarationByIndex (int index);
     int GetMembersCount ();

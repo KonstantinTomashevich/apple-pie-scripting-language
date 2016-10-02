@@ -3,7 +3,7 @@
 
 namespace ApplePie
 {
-ClassDeclaration::ClassDeclaration (std::string name, std::vector<ClassDeclaration *> bases,
+ClassDeclaration::ClassDeclaration (std::string name, std::vector <std::string> bases,
                                     std::vector <VariableDeclaration *> &members,
                                     std::vector <FunctionDeclaration *> functions) :
     name_ (name),
@@ -25,7 +25,7 @@ ClassDeclaration::~ClassDeclaration ()
     functions_.clear ();
 }
 
-ClassDeclaration *ClassDeclaration::GetBaseDeclarationByIndex (int index)
+std::string ClassDeclaration::GetBaseNameByIndex(int index)
 {
     assert (index < bases_.size ());
     return bases_.at (index);
@@ -84,7 +84,7 @@ std::string ClassDeclaration::ToString (int addSpacesIndentation)
         result += " inherits from ";
         for (int index = 0; index < bases_.size (); index++)
         {
-            result += bases_.at (index)->GetName ();
+            result += bases_.at (index);
             if (index > bases_.size () - 1)
                 result += ", ";
         }

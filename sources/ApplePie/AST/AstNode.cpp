@@ -21,7 +21,7 @@ void AstNode::PushValue (AstValue *value)
     childValues_.push_back (value);
 }
 
-AstValue *AstNode::GetAtIndex (int index)
+AstValue *AstNode::GetValueByIndex (int index)
 {
     assert (index < childValues_.size ());
     return childValues_.at (index);
