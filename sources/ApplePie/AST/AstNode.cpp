@@ -11,8 +11,9 @@ AstNode::AstNode () :
 
 AstNode::~AstNode ()
 {
-    for (int index = 0; index < childValues_.size (); index++)
-        delete childValues_.at (index);
+    if (!childValues_.empty ())
+        for (int index = 0; index < childValues_.size (); index++)
+            delete childValues_.at (index);
     childValues_.clear ();
 }
 

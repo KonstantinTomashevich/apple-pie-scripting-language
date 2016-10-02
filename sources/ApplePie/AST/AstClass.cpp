@@ -66,13 +66,14 @@ AstClass::AstClass (std::string name, std::vector <AstCall *> basesConstructorsC
 
 AstClass::~AstClass ()
 {
-    // TODO: Check is vectors empty. Not only here, in all destructors.
-    for (int index = 0; index < basesConstructorsCalls_.size (); index++)
-        delete basesConstructorsCalls_.at (index);
+    if (!basesConstructorsCalls_.empty ())
+        for (int index = 0; index < basesConstructorsCalls_.size (); index++)
+            delete basesConstructorsCalls_.at (index);
     basesConstructorsCalls_.clear ();
 
-    for (int index = 0; index < functions_.size (); index++)
-        delete functions_.at (index);
+    if (!functions_.empty ())
+        for (int index = 0; index < functions_.size (); index++)
+            delete functions_.at (index);
     functions_.clear ();
 
     delete constructor_;

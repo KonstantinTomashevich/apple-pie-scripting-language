@@ -13,6 +13,7 @@ AstFunction::AstFunction (FunctionDeclaration *declaration, AstNode *body) :
 AstFunction::~AstFunction ()
 {
     delete declaration_;
+    delete body_;
 }
 
 AstNode *AstFunction::GetBody ()

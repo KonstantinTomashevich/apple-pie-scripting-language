@@ -14,8 +14,9 @@ FunctionDeclaration::FunctionDeclaration (std::string name, std::string returnTy
 
 FunctionDeclaration::~FunctionDeclaration()
 {
-    for (int index = 0; index < arguments_.size (); index++)
-        delete arguments_.at (index);
+    if (!arguments_.empty ())
+        for (int index = 0; index < arguments_.size (); index++)
+            delete arguments_.at (index);
     arguments_.clear ();
 }
 

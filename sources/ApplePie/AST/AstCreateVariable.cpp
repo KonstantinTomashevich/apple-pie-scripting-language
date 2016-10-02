@@ -14,8 +14,9 @@ AstCreateVariable::AstCreateVariable (VariableCreationType creationType, Variabl
 
 AstCreateVariable::~AstCreateVariable ()
 {
-    for (int index = 0; index < constructionArguments_.size (); index++)
-        delete constructionArguments_.at (index);
+    if (!constructionArguments_.empty ())
+        for (int index = 0; index < constructionArguments_.size (); index++)
+            delete constructionArguments_.at (index);
     constructionArguments_.clear ();
 }
 

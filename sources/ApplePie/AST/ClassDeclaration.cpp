@@ -16,12 +16,14 @@ ClassDeclaration::ClassDeclaration (std::string name, std::vector <std::string> 
 
 ClassDeclaration::~ClassDeclaration ()
 {
-    for (int index = 0; index < members_.size (); index++)
-        delete members_.at (index);
+    if (!members_.empty ())
+        for (int index = 0; index < members_.size (); index++)
+            delete members_.at (index);
     members_.clear ();
 
-    for (int index = 0; index < functions_.size (); index++)
-        delete functions_.at (index);
+    if (!functions_.empty ())
+        for (int index = 0; index < functions_.size (); index++)
+            delete functions_.at (index);
     functions_.clear ();
 }
 
