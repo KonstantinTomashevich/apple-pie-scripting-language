@@ -48,4 +48,15 @@ public:
     bool IsIgnoringRefsCount ();
     void SetIsIgnoringRefsCount (bool ignore);
 };
+
+class Range
+{
+public:
+    double minimum_;
+    double maximum_;
+    double step_;
+
+    Range (double minimum, double maximum, double step = 1.0);
+    virtual ~Range ();
+};
 }

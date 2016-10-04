@@ -64,4 +64,17 @@ std::string DoubleToString (double number)
     strs << number;
     return strs.str ();
 }
+
+Range::Range (double minimum, double maximum, double step) :
+    minimum_ (minimum),
+    maximum_ (maximum),
+    step_ (step)
+{
+
+}
+
+Range::~Range()
+{
+
+}
 }
