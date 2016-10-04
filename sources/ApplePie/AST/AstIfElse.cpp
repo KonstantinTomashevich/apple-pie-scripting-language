@@ -44,12 +44,12 @@ std::string AstIfElse::ToString(int addSpacesIndentation)
     result += indent + "[if-else with condition:\n";
     result += condition_->ToString (addSpacesIndentation + 4);
     result += indent + "if true do block:\n";
-    result += ifConditionTrueBlock_->ToString (addSpacesIndentation + 4);
+    result += ifConditionTrueBlock_->ToString (addSpacesIndentation + 4) + "\n";
 
     if  (ifConditionFalseBlock_)
     {
         result += indent + "else do block:\n";
-        result += ifConditionFalseBlock_->ToString (addSpacesIndentation + 4);
+        result += ifConditionFalseBlock_->ToString (addSpacesIndentation + 4) + "\n";
     }
     result += indent + "end of if-else]";
     return result;
