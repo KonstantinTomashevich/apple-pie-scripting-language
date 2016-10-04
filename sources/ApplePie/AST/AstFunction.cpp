@@ -7,7 +7,7 @@ AstFunction::AstFunction (FunctionDeclaration *declaration, AstNode *body) :
     declaration_ (declaration),
     body_ (body)
 {
-
+    // TODO: Add assertions in all ast values constructors.
 }
 
 AstFunction::~AstFunction ()

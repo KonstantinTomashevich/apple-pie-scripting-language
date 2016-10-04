@@ -17,6 +17,8 @@ enum TokenType
     // '+', '=', '&&'...
     TOKEN_NOT_ALNUM_SYMBOLS,
 
+    // TODO: Add tokens for if-else, for, while, foreach and return.
+
     // For declaring local variables.
     TOKEN_LOCAL,
     // For declaring global variables.
