@@ -15,6 +15,13 @@ enum VariableCreationType
     VARIABLE_CLASS_MEMBER = 2
 };
 
+enum VariableConstructionType
+{
+    VARIABLE_CONSTRUCTION_NEW = 0,
+    VARIABLE_CONSTRUCTION_COPY = 1,
+    VARIABLE_CONSTRUCTION_REF = 2
+};
+
 std::string IntToString (int number);
 std::string FloatToString (float number);
 std::string DoubleToString (double number);

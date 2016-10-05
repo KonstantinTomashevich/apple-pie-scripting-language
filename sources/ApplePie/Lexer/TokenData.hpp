@@ -18,6 +18,7 @@ enum TokenType
     TOKEN_NOT_ALNUM_SYMBOLS,
 
     // TODO: Add tokens for if-else, for, while, foreach and return.
+    // TODO: Add tokens for copy and ref constructors.
 
     // For declaring local variables.
     TOKEN_LOCAL,

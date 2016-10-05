@@ -4,10 +4,12 @@
 namespace ApplePie
 {
 AstCreateVariable::AstCreateVariable (VariableCreationType creationType, VariableDeclaration *declaration,
-                                      std::vector <AstValue *> &constructionArguments) :
+                                      std::vector <AstValue *> &constructionArguments,
+                                      VariableConstructionType constructionType) :
     creationType_ (creationType),
     declaration_ (declaration),
-    constructionArguments_ (constructionArguments)
+    constructionArguments_ (constructionArguments),
+    constructionType_ (constructionType)
 {
     assert (declaration_);
 }
@@ -41,6 +43,11 @@ int AstCreateVariable::GetConstructionArgumentsCount ()
     return constructionArguments_.size ();
 }
 
+VariableConstructionType AstCreateVariable::GetConstructionType ()
+{
+    return constructionType_;
+}
+
 std::string AstCreateVariable::ToString (int addSpacesIndentation)
 {
     std::string result;
@@ -63,8 +70,18 @@ std::string AstCreateVariable::ToString (int addSpacesIndentation)
     result += declaration_->GetName ();
     result += " of type ";
     result += declaration_->GetType ();
-    result += ";\n" + indent + "construction arguments:\n";
 
+    result += ";\n" + indent + "construction type: ";
+    if (constructionType_ == VARIABLE_CONSTRUCTION_NEW)
+        result += "new;\n";
+    else if (constructionType_ == VARIABLE_CONSTRUCTION_COPY)
+            result += "copy;\n";
+    else if (constructionType_ == VARIABLE_CONSTRUCTION_REF)
+            result += "ref;\n";
+    else
+            result += "UNKNOWN;\n";
+
+    result += indent + "construction arguments:\n";
     if (constructionArguments_.size () > 0)
         for (int index = 0; index < constructionArguments_.size (); index++)
             result += constructionArguments_.at (index)->ToString (addSpacesIndentation + 4) + "\n";
