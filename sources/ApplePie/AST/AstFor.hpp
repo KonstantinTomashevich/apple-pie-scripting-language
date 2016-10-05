@@ -7,7 +7,6 @@
 
 namespace ApplePie
 {
-// TODO: Make AstForeach later.
 unsigned AST_FOR_TYPE_HASH = StringToHash ("AstFor");
 
 class AstFor : public AstValue

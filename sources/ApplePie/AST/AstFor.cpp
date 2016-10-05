@@ -12,7 +12,8 @@ AstFor::AstFor (AstVariableReference *counter, Range range, AstNode *block) :
 
 AstFor::~AstFor ()
 {
-
+    delete counter_;
+    delete block_;
 }
 
 AstVariableReference *AstFor::GetCounter ()
