@@ -60,7 +60,8 @@ bool Lexer::ReadIdentifier (std::vector <TokenData> &tokens)
             return true;
         }
     }
-    while (std::isalnum (processingCode_.at (lastReadIndex_)));
+    while (std::isalnum (processingCode_.at (lastReadIndex_)) ||
+           processingCode_.at (lastReadIndex_) == '_');
     PushIdentifierOrCommand (identifier, tokens);
     return true;
 }
