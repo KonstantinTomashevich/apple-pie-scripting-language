@@ -73,12 +73,42 @@ bool Lexer::PushIdentifierOrCommand (std::string identifier, std::vector<TokenDa
         tokens.push_back (TokenData (TOKEN_GLOBAL, "", 0.0, lastLineIndex_));
     else if (identifier == "member")
         tokens.push_back (TokenData (TOKEN_MEMBER, "", 0.0, lastLineIndex_));
+
     else if (identifier == "define")
         tokens.push_back (TokenData (TOKEN_DEFINE, "", 0.0, lastLineIndex_));
     else if (identifier == "class")
         tokens.push_back (TokenData (TOKEN_CLASS, "", 0.0, lastLineIndex_));
     else if (identifier == "inherits")
         tokens.push_back (TokenData (TOKEN_INHERITS, "", 0.0, lastLineIndex_));
+
+    else if (identifier == "if")
+        tokens.push_back (TokenData (TOKEN_IF, "", 0.0, lastLineIndex_));
+    else if (identifier == "else")
+        tokens.push_back (TokenData (TOKEN_ELSE, "", 0.0, lastLineIndex_));
+
+    else if (identifier == "for")
+        tokens.push_back (TokenData (TOKEN_FOR, "", 0.0, lastLineIndex_));
+    else if (identifier == "in_range")
+        tokens.push_back (TokenData (TOKEN_IN_RANGE, "", 0.0, lastLineIndex_));
+    else if (identifier == "with_step")
+        tokens.push_back (TokenData (TOKEN_WITH_STEP, "", 0.0, lastLineIndex_));
+
+    else if (identifier == "while")
+        tokens.push_back (TokenData (TOKEN_WHILE, "", 0.0, lastLineIndex_));
+    else if (identifier == "do_while")
+        tokens.push_back (TokenData (TOKEN_DO_WHILE, "", 0.0, lastLineIndex_));
+
+    else if (identifier == "foreach")
+        tokens.push_back (TokenData (TOKEN_FOREACH, "", 0.0, lastLineIndex_));
+    else if (identifier == "in")
+        tokens.push_back (TokenData (TOKEN_IN, "", 0.0, lastLineIndex_));
+
+    else if (identifier == "return")
+        tokens.push_back (TokenData (TOKEN_RETURN, "", 0.0, lastLineIndex_));
+    else if (identifier == "copy_of")
+        tokens.push_back (TokenData (TOKEN_COPY_OF, "", 0.0, lastLineIndex_));
+    else if (identifier == "ref_to")
+        tokens.push_back (TokenData (TOKEN_REF_TO, "", 0.0, lastLineIndex_));
     else
         tokens.push_back (TokenData (TOKEN_IDENTIFIER, identifier, 0.0, lastLineIndex_));
 }

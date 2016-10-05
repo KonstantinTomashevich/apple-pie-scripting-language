@@ -24,7 +24,7 @@
 23: Line 4 -- END_OF_LINE
 24: Line 5 -- CODE_BLOCK_START
 25: Line 5 -- END_OF_LINE
-26: Line 6 -- IDENTIFIER 'return'
+26: Line 6 -- RETURN
 27: Line 6 -- IDENTIFIER 'variableA'
 28: Line 6 -- NOT_ALNUM_SYMBOLS '*'
 29: Line 6 -- IDENTIFIER 'variableA'
@@ -60,7 +60,7 @@
 59: Line 13 -- END_OF_LINE
 60: Line 14 -- CODE_BLOCK_START
 61: Line 14 -- END_OF_LINE
-62: Line 15 -- IDENTIFIER 'return'
+62: Line 15 -- RETURN
 63: Line 15 -- OPEN_CIRCLE_BRACKETS
 64: Line 15 -- IDENTIFIER 'variableB'
 65: Line 15 -- NOT_ALNUM_SYMBOLS '+'
@@ -105,7 +105,7 @@
 104: Line 23 -- END_OF_LINE
 105: Line 24 -- CODE_BLOCK_START
 106: Line 24 -- END_OF_LINE
-107: Line 25 -- IDENTIFIER 'return'
+107: Line 25 -- RETURN
 108: Line 25 -- OPEN_CIRCLE_BRACKETS
 109: Line 25 -- IDENTIFIER 'variableA'
 110: Line 25 -- NOT_ALNUM_SYMBOLS '+'
@@ -178,7 +178,7 @@
 177: Line 34 -- IDENTIFIER 'diff'
 178: Line 34 -- CLOSE_CIRCLE_BRACKETS
 179: Line 34 -- END_OF_LINE
-180: Line 35 -- IDENTIFIER 'return'
+180: Line 35 -- RETURN
 181: Line 35 -- IDENTIFIER 'result'
 182: Line 35 -- END_OF_LINE
 183: Line 36 -- CODE_BLOCK_END

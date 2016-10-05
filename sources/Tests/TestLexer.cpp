@@ -7,6 +7,8 @@
 #include <ApplePie/Lexer/Lexer.hpp>
 #include <ApplePie/Utils.hpp>
 
+// TODO: Move 'for_testing' directory to 'data'. Delete 'examples' directory.
+
 std::string TokenDataToString (ApplePie::TokenData tokenData)
 {
     if (tokenData.type_ == ApplePie::TOKEN_END_OF_LINE)
@@ -41,6 +43,42 @@ std::string TokenDataToString (ApplePie::TokenData tokenData)
 
     else if (tokenData.type_ == ApplePie::TOKEN_INHERITS)
         return "INHERITS";
+
+    else if (tokenData.type_ == ApplePie::TOKEN_IF)
+        return "IF";
+
+    else if (tokenData.type_ == ApplePie::TOKEN_ELSE)
+        return "ELSE";
+
+    else if (tokenData.type_ == ApplePie::TOKEN_FOR)
+        return "FOR";
+
+    else if (tokenData.type_ == ApplePie::TOKEN_IN_RANGE)
+        return "IN_RANGE";
+
+    else if (tokenData.type_ == ApplePie::TOKEN_WITH_STEP)
+        return "WITH_STEP";
+
+    else if (tokenData.type_ == ApplePie::TOKEN_WHILE)
+        return "WHILE";
+
+    else if (tokenData.type_ == ApplePie::TOKEN_DO_WHILE)
+        return "DO_WHILE";
+
+    else if (tokenData.type_ == ApplePie::TOKEN_FOREACH)
+        return "FOREACH";
+
+    else if (tokenData.type_ == ApplePie::TOKEN_IN)
+        return "IN";
+
+    else if (tokenData.type_ == ApplePie::TOKEN_RETURN)
+        return "RETURN";
+
+    else if (tokenData.type_ == ApplePie::TOKEN_COPY_OF)
+        return "COPY_OF";
+
+    else if (tokenData.type_ == ApplePie::TOKEN_REF_TO)
+        return "REF_TO";
 
     else if (tokenData.type_ == ApplePie::TOKEN_CODE_BLOCK_START)
         return "CODE_BLOCK_START";

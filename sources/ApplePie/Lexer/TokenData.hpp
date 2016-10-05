@@ -17,8 +17,31 @@ enum TokenType
     // '+', '=', '&&'...
     TOKEN_NOT_ALNUM_SYMBOLS,
 
-    // TODO: Add tokens for if-else, for, while, foreach and return.
-    // TODO: Add tokens for copy and ref constructors.
+    // For if-else.
+    TOKEN_IF,
+    TOKEN_ELSE,
+
+    // For for cycle.
+    TOKEN_FOR,
+    TOKEN_IN_RANGE,
+    TOKEN_WITH_STEP,
+
+    // For while cycle.
+    TOKEN_WHILE,
+    TOKEN_DO_WHILE,
+
+    // For foreach cycle.
+    TOKEN_FOREACH,
+    TOKEN_IN,
+
+    // For functions return.
+    TOKEN_RETURN,
+
+    // For copy variable construction.
+    TOKEN_COPY_OF,
+
+    // For ref variable construction.
+    TOKEN_REF_TO,
 
     // For declaring local variables.
     TOKEN_LOCAL,
