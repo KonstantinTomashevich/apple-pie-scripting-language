@@ -1,7 +1,7 @@
 #Some comment about our class
 class BaseClass1 (arg : Number) 
 {
-    member variableA : Number (arg)
+    member variableA : Number copy_of arg
     define Square () : Number
     {
         return variableA * variableA
@@ -11,7 +11,7 @@ class BaseClass1 (arg : Number)
 #Some comment about our class
 class BaseClass2 (arg : Number) 
 {
-    member variableB : Number (arg)
+    member variableB : Number copy_of arg
     define Square () : Number
     {
         return (variableB + 1) * variableB
@@ -31,15 +31,16 @@ class MyClass (arg1 : Number, arg2 : Number) inherits BaseClass1 (arg1), BaseCla
 #Some comment about function
 define MyFunction (arg1 : Number, arg2 : Number) : Number
 {
-    local sum : Number (arg1 + arg2)
-    local diff : Number (Math.Abs (arg1 - arg2))
-    local result : Number (sum + diff)
+    local sum : Number copy_of (arg1 + arg2)
+    local diff : Number copy_of (MathAbs (arg1 - arg2))
+    local result : Number copy_of ((sum + dif) / 2)
     return result
 }
 
 # Lets create some globals!
 global myObject : MyClass (3, 4)
 global mySecondObject : MyClass (0.1, 2.3)
+global reference : MyClass ref_to myObject
 
 # This is multiline    @
 comment! And it will   @

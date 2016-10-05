@@ -7,8 +7,6 @@
 #include <ApplePie/Lexer/Lexer.hpp>
 #include <ApplePie/Utils.hpp>
 
-// TODO: Move 'for_testing' directory to 'data'. Delete 'examples' directory.
-
 std::string TokenDataToString (ApplePie::TokenData tokenData)
 {
     if (tokenData.type_ == ApplePie::TOKEN_END_OF_LINE)
@@ -114,7 +112,7 @@ int main (int argsCount, char *args [])
     std::ifstream file;
     std::string path;
     path += APPLE_PIE_TESTS_DATA_DIR;
-    path += "/examples/for_testing/ForLexerTest.pie";
+    path += "/for_testing/ForLexerTest.pie";
     file.open (path.c_str ());
 
     std::string code;
