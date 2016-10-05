@@ -61,6 +61,8 @@ AstClass::AstClass (std::string name, std::vector <AstCall *> basesConstructorsC
     functions_ (functions),
     generatedDeclaration_ (0)
 {
+    assert (!name_.empty ());
+    assert (constructor_);
     GenerateDeclaration ();
 }
 

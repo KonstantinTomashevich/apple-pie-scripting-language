@@ -1,4 +1,5 @@
 #include "AstIfElse.hpp"
+#include <assert.h>
 
 namespace ApplePie
 {
@@ -7,7 +8,8 @@ AstIfElse::AstIfElse (AstValue *condition, AstNode *ifConditionTrueBlock, AstNod
     ifConditionTrueBlock_ (ifConditionTrueBlock),
     ifConditionFalseBlock_ (ifConditionFalseBlock)
 {
-
+    assert (condition_);
+    assert (ifConditionTrueBlock_);
 }
 
 AstIfElse::~AstIfElse ()

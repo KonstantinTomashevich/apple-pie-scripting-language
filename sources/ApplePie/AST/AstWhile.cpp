@@ -1,4 +1,5 @@
 #include "AstWhile.hpp"
+#include <assert.h>
 
 namespace ApplePie
 {
@@ -7,7 +8,8 @@ AstWhile::AstWhile (AstValue *condition, AstNode *block, bool checkConditionAfte
     block_ (block),
     checkConditionAfterExecutingBlock_ (checkConditionAfterExecutingBlock)
 {
-
+    assert (condition_);
+    assert (block_);
 }
 
 AstWhile::~AstWhile ()

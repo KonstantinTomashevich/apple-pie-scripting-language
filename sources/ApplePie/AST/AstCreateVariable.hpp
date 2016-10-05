@@ -10,6 +10,7 @@ namespace ApplePie
 {
 unsigned AST_CREATE_VARIABLE_TYPE_HASH = StringToHash ("AstCreateVariable");
 
+// TODO: Implement copy and ref constructions.
 class AstCreateVariable : public AstValue
 {
 APPLE_PIE_OBJECT_WITH_KNOWN_TYPE (AstCreateVariable, AST_CREATE_VARIABLE_TYPE_HASH)

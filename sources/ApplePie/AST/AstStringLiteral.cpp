@@ -1,11 +1,12 @@
 #include "AstStringLiteral.hpp"
+#include <assert.h>
 
 namespace ApplePie
 {
 AstStringLiteral::AstStringLiteral (std::string value) :
     value_ (value)
 {
-
+    assert (!value_.empty ());
 }
 
 AstStringLiteral::~AstStringLiteral ()

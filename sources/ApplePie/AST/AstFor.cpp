@@ -1,4 +1,5 @@
 #include "AstFor.hpp"
+#include <assert.h>
 
 namespace ApplePie
 {
@@ -7,7 +8,8 @@ AstFor::AstFor (AstVariableReference *counter, Range range, AstNode *block) :
     range_ (range),
     block_ (block)
 {
-
+    assert (counter_);
+    assert (block_);
 }
 
 AstFor::~AstFor ()

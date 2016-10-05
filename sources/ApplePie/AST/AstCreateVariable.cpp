@@ -9,7 +9,7 @@ AstCreateVariable::AstCreateVariable (VariableCreationType creationType, Variabl
     declaration_ (declaration),
     constructionArguments_ (constructionArguments)
 {
-
+    assert (declaration_);
 }
 
 AstCreateVariable::~AstCreateVariable ()

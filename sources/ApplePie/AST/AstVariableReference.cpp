@@ -1,4 +1,5 @@
 #include "AstVariableReference.hpp"
+#include <assert.h>
 
 namespace ApplePie
 {
@@ -6,7 +7,7 @@ AstVariableReference::AstVariableReference (std::string name, AstValue *provider
     name_ (name),
     provider_ (provider)
 {
-
+    assert (!name_.empty ());
 }
 
 AstVariableReference::~AstVariableReference ()

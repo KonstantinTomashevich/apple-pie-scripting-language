@@ -1,4 +1,5 @@
 #include "AstOneArgumentOperator.hpp"
+#include <assert.h>
 
 namespace ApplePie
 {
@@ -7,7 +8,9 @@ AstOneArgumentOperator::AstOneArgumentOperator (std::string operatorName, std::s
     operatorReturnType_ (operatorReturnType),
     argument_ (argument)
 {
-
+    assert (!operatorName_.empty ());
+    assert (!operatorReturnType_.empty ());
+    assert (argument_);
 }
 
 AstOneArgumentOperator::~AstOneArgumentOperator ()

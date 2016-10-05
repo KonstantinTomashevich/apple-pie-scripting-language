@@ -1,14 +1,19 @@
 #include "AstTwoArgumentsOperator.hpp"
+#include <assert.h>
 
 namespace ApplePie
 {
-AstTwoArgumentsOperators::AstTwoArgumentsOperators (std::string operatorName, std::string operatorReturnType, AstValue *firstArgument, AstValue *secondArgument) :
+AstTwoArgumentsOperators::AstTwoArgumentsOperators (std::string operatorName, std::string operatorReturnType,
+                                                    AstValue *firstArgument, AstValue *secondArgument) :
     operatorName_ (operatorName),
     operatorReturnType_ (operatorReturnType),
     firstArgument_ (firstArgument),
     secondArgument_ (secondArgument)
 {
-
+    assert (!operatorName_.empty ());
+    assert (!operatorReturnType_.empty ());
+    assert (firstArgument_);
+    assert (secondArgument_);
 }
 
 AstTwoArgumentsOperators::~AstTwoArgumentsOperators ()

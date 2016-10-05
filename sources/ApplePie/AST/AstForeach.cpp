@@ -1,4 +1,5 @@
 #include "AstForeach.hpp"
+#include <assert.h>
 
 namespace ApplePie
 {
@@ -7,7 +8,9 @@ AstForeach::AstForeach (AstVariableReference *currentArrayElementOutput, AstVari
     array_ (array),
     block_ (block)
 {
-
+    assert (currentArrayElementOutput_);
+    assert (array_);
+    assert (block_);
 }
 
 AstForeach::~AstForeach ()

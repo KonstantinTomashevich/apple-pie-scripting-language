@@ -3,12 +3,12 @@
 
 namespace ApplePie
 {
-AstCall::AstCall (std::string calledFunction, std::vector<AstValue *> arguments, AstValue *provider) :
+AstCall::AstCall (std::string calledFunction, std::vector <AstValue *> arguments, AstValue *provider) :
     calledFunction_ (calledFunction),
     arguments_ (arguments),
     provider_ (provider)
 {
-
+    assert (!calledFunction.empty ());
 }
 
 AstCall::~AstCall ()

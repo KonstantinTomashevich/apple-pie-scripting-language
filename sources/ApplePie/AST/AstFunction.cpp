@@ -1,4 +1,5 @@
 #include "AstFunction.hpp"
+#include <assert.h>
 
 namespace ApplePie
 {
@@ -7,7 +8,8 @@ AstFunction::AstFunction (FunctionDeclaration *declaration, AstNode *body) :
     declaration_ (declaration),
     body_ (body)
 {
-    // TODO: Add assertions in all ast values constructors.
+    assert (declaration_);
+    assert (body_);
 }
 
 AstFunction::~AstFunction ()
