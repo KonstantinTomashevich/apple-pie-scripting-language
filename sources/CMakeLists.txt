@@ -1,6 +1,6 @@
 include_directories (${CMAKE_CURRENT_SOURCE_DIR})
-add_subdirectory (ApplePie)
+add_subdirectory (Dwarf)
 add_subdirectory (Interpreter)
-if (APPLE_PIE_CTEST)
+if (DWARF_CTEST)
     add_subdirectory (Tests)
 endif ()
