@@ -28,7 +28,7 @@ enum VariableConstructionType
 std::string IntToString (int number);
 std::string FloatToString (float number);
 std::string DoubleToString (double number);
-unsigned StringToHash(std::string str);
+unsigned long StringToHash (std::string str);
 
 class StringifyAble
 {

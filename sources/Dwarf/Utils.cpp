@@ -3,12 +3,12 @@
 
 namespace Dwarf
 {
-unsigned StringToHash (std::string str)
+unsigned long StringToHash (std::string str)
 {
-    unsigned hash = 37;
+    unsigned long hash = 37;
     for (int index = 0; index < str.length (); index++)
         hash = (hash * 54059) ^ (str.at (index) * 76943);
-    return hash % 86969;
+    return hash % 24783471;
 }
 
 RefCounted::RefCounted ()
