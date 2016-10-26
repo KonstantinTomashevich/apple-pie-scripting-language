@@ -24,7 +24,7 @@ std::string GenerateRandomString ()
 
 int main (int argsCount, char *args [])
 {
-    const int CYCLES_COUNT = 100000;
+    const int CYCLES_COUNT = 250000;
     std::cout << "Started...\n";
     srand (time (0));
 
@@ -42,8 +42,8 @@ int main (int argsCount, char *args [])
         while (firstString == secondString);
 
         std::cout << "Strings: " << firstString << " and " << secondString << "\n";
-        unsigned firstHash = Dwarf::StringToHash (firstString);
-        unsigned secondHash = Dwarf::StringToHash (secondString);
+        unsigned long firstHash = Dwarf::StringToHash (firstString);
+        unsigned long secondHash = Dwarf::StringToHash (secondString);
 
         std::cout << "Hashes: " << firstHash << " and " << secondHash << "\n";
         if (firstHash == secondHash)
