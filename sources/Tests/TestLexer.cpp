@@ -111,9 +111,11 @@ int main (int argsCount, char *args [])
     std::cout << "Reading test code...";
     std::ifstream file;
     std::string path;
-    path += APPLE_PIE_TESTS_DATA_DIR;
+    path += DWARF_TESTS_DATA_DIR;
     path += "/for_testing/ForLexerTest.dwarf";
     file.open (path.c_str ());
+
+    // TODO: About test code. I think using Main (arguments) function is better.
 
     std::string code;
     std::string line;
@@ -138,7 +140,7 @@ int main (int argsCount, char *args [])
     }
     std::cout << resultTokens;
 
-    path = APPLE_PIE_TESTS_DATA_DIR;
+    path = DWARF_TESTS_DATA_DIR;
     path += "/expected_test_results/TestLexer.txt";
     file.open (path.c_str ());
 

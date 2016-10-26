@@ -8,6 +8,9 @@
 
 namespace Dwarf
 {
+// TODO: If variable created inside function, it will be local (obviously). /...Continued.../
+// If variable created outside functions and classes, it will be global (obviously too).
+// And that seems that we don't need "VariableCreationType", we need only isClassMember flag.
 enum VariableCreationType
 {
     VARIABLE_LOCAL = 0,
