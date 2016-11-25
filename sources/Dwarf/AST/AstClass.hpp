@@ -5,7 +5,7 @@
 #include <Dwarf/AST/AstValue.hpp>
 #include <Dwarf/AST/AstFunction.hpp>
 #include <Dwarf/AST/AstCall.hpp>
-#include <Dwarf/AST/ClassDeclaration.hpp>
+#include <Dwarf/Declarations/ClassDeclaration.hpp>
 #include <Dwarf/Utils.hpp>
 
 namespace Dwarf

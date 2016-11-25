@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include <Dwarf/AST/Declaration.hpp>
+#include <Dwarf/Declarations/Declaration.hpp>
 #include <Dwarf/Utils.hpp>
 
 namespace Dwarf

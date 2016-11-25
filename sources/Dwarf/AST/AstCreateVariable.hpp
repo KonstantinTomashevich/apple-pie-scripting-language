@@ -4,7 +4,7 @@
 
 #include <Dwarf/Utils.hpp>
 #include <Dwarf/AST/AstValue.hpp>
-#include <Dwarf/AST/VariableDeclaration.hpp>
+#include <Dwarf/Declarations/VariableDeclaration.hpp>
 
 namespace Dwarf
 {

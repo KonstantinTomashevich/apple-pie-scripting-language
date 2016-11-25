@@ -2,8 +2,8 @@
 #include <string>
 #include <vector>
 
-#include <Dwarf/AST/Declaration.hpp>
-#include <Dwarf/AST/VariableDeclaration.hpp>
+#include <Dwarf/Declarations/Declaration.hpp>
+#include <Dwarf/Declarations/VariableDeclaration.hpp>
 #include <Dwarf/Utils.hpp>
 
 namespace Dwarf

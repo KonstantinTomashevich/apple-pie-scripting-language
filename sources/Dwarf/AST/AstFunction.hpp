@@ -1,8 +1,8 @@
 #pragma once
 #include <string>
 #include <Dwarf/AST/AstValue.hpp>
-#include <Dwarf/AST/FunctionDeclaration.hpp>
 #include <Dwarf/AST/AstNode.hpp>
+#include <Dwarf/Declarations/FunctionDeclaration.hpp>
 #include <Dwarf/Utils.hpp>
 
 namespace Dwarf
