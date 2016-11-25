@@ -6,7 +6,7 @@
 
 namespace Dwarf
 {
-unsigned AST_WHILE_TYPE_HASH = StringToHash ("AstWhile");
+const unsigned AST_WHILE_TYPE_HASH = StringToHash ("AstWhile");
 
 class AstWhile : public AstValue
 {

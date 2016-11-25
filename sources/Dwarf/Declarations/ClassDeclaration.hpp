@@ -9,7 +9,7 @@
 
 namespace Dwarf
 {
-unsigned CLASS_DECLARITION_TYPE_HASH = StringToHash ("ClassDeclarition");
+const unsigned CLASS_DECLARITION_TYPE_HASH = StringToHash ("ClassDeclarition");
 
 class ClassDeclaration : public Declaration
 {

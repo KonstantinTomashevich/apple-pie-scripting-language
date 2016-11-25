@@ -2,11 +2,11 @@
 #include <string>
 #include <Dwarf/Utils.hpp>
 #include <Dwarf/AST/AstValue.hpp>
-#include <Dwarf/AST/VariableDeclaration.hpp>
+#include <Dwarf/Declarations/VariableDeclaration.hpp>
 
 namespace Dwarf
 {
-unsigned AST_VARIABLE_REFERENCE_TYPE_HASH = StringToHash ("AstVariableReference");
+const unsigned AST_VARIABLE_REFERENCE_TYPE_HASH = StringToHash ("AstVariableReference");
 
 class AstVariableReference : public AstValue
 {

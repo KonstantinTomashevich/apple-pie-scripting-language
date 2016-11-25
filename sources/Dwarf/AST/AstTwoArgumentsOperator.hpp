@@ -5,7 +5,7 @@
 
 namespace Dwarf
 {
-unsigned AST_TWO_ARGUMENT_OPERATOR_TYPE_HASH = StringToHash ("AstTwoArgumentsOperator");
+const unsigned AST_TWO_ARGUMENT_OPERATOR_TYPE_HASH = StringToHash ("AstTwoArgumentsOperator");
 
 class AstTwoArgumentsOperators : public AstValue
 {

@@ -5,7 +5,7 @@
 
 namespace Dwarf
 {
-unsigned VARIABLE_DECLARITION_TYPE_HASH = StringToHash ("VariableDeclarition");
+const unsigned VARIABLE_DECLARITION_TYPE_HASH = StringToHash ("VariableDeclarition");
 
 class VariableDeclaration : public Declaration
 {

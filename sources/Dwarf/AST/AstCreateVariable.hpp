@@ -8,7 +8,7 @@
 
 namespace Dwarf
 {
-unsigned AST_CREATE_VARIABLE_TYPE_HASH = StringToHash ("AstCreateVariable");
+const unsigned AST_CREATE_VARIABLE_TYPE_HASH = StringToHash ("AstCreateVariable");
 
 // TODO: Read about "VariableCreationType" in Utils.hpp. Also maybe add non_ref_counted variables?
 

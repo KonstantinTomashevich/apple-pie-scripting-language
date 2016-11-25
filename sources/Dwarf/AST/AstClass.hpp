@@ -10,7 +10,7 @@
 
 namespace Dwarf
 {
-unsigned AST_CLASS_TYPE_HASH = StringToHash ("AstClass");
+const unsigned AST_CLASS_TYPE_HASH = StringToHash ("AstClass");
 
 class AstClass : AstValue
 {

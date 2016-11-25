@@ -6,7 +6,7 @@
 
 namespace Dwarf
 {
-unsigned AST_IF_ELSE_TYPE_HASH = StringToHash ("AstIfElse");
+const unsigned AST_IF_ELSE_TYPE_HASH = StringToHash ("AstIfElse");
 
 class AstIfElse : public AstValue
 {

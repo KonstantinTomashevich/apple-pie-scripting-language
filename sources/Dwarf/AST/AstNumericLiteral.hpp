@@ -5,7 +5,7 @@
 
 namespace Dwarf
 {
-unsigned AST_NUMERIC_LITERAL_TYPE_HASH = StringToHash ("AstNumericLiteral");
+const unsigned AST_NUMERIC_LITERAL_TYPE_HASH = StringToHash ("AstNumericLiteral");
 
 class AstNumericLiteral : public AstValue
 {

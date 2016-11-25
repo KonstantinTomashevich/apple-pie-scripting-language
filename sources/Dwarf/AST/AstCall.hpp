@@ -7,7 +7,7 @@
 
 namespace Dwarf
 {
-unsigned AST_CALL_TYPE_HASH = StringToHash ("AstCall");
+const unsigned AST_CALL_TYPE_HASH = StringToHash ("AstCall");
 
 class AstCall : public AstValue
 {

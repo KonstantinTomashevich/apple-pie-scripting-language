@@ -7,7 +7,7 @@
 
 namespace Dwarf
 {
-unsigned AST_NODE_TYPE_HASH = StringToHash ("AstNode");
+const unsigned AST_NODE_TYPE_HASH = StringToHash ("AstNode");
 
 class AstNode : public AstValue
 {

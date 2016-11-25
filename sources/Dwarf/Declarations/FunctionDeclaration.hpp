@@ -8,7 +8,7 @@
 
 namespace Dwarf
 {
-unsigned FUNCTION_DECLARATION_TYPE_HASH = StringToHash ("FunctionDeclaration");
+const unsigned FUNCTION_DECLARATION_TYPE_HASH = StringToHash ("FunctionDeclaration");
 
 class FunctionDeclaration : public Declaration
 {

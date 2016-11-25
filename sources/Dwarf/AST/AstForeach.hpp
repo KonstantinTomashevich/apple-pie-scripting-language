@@ -7,7 +7,7 @@
 
 namespace Dwarf
 {
-unsigned AST_FOREACH_TYPE_HASH = StringToHash ("AstForeach");
+const unsigned AST_FOREACH_TYPE_HASH = StringToHash ("AstForeach");
 
 class AstForeach : public AstValue
 {
